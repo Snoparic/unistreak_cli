@@ -1,0 +1,9 @@
+build/
+bin/
+*.exe
+*.tar
+*.o
+*.obj
+*.a
+*.dll
+*.so

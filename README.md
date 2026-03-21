@@ -2,21 +2,43 @@
 
 Клиент для работы с эмулятором сервера регистратора UniStreak ® ВНИИА им. Духова (2‑я ревизия).
 
-## Состав релиза
+```txt
+.
+├── cmake
+│   ├── toolchain-linux-x86_64.cmake
+│   ├── toolchain-linux-x86.cmake
+│   ├── toolchain-win32-x86.cmake
+│   └── toolchain-windows-x64.cmake
+├── CMakeLists.txt
+├── LICENSE_EN
+├── LICENSE_RU
+├── main.c
+├── README.md
+└── scripts
+    └── build-all.sh
+```
 
-- `unistreak_cli-1.0.0-linux-x86_64.tar` – 64‑битная версия для Linux
-- `unistreak_cli-1.0.0-linux-x86.tar` – 32‑битная версия для Linux
-- `unistreak_cli-1.0.0-windows-x64.exe.tar` – 64‑битная версия для Windows
-- `unistreak_cli-1.0.0-win32-x86.exe.tar` – 32‑битная версия для Windows
+## Инструкция по сборке из исходников
 
-В каждом архиве содержатся:
-- исполняемый файл клиента
-- файл с SHA‑256 хэшем самого исполняемого файла
+### Требования
+- CMake 3.20+
+- Make
+- Компилятор Clang или GCC
+- MSYS2 или WSL с MinGW (Windows)
 
+### Сборка
 
-## Проверка целостности
+Для сборки клиента из исходного кода необходимо:
 
-Для проверки целостности архива используйте файл `sha256sums.txt` (SHA‑256 от архивов):
+1. Установить инструменты: CMake (≥3.20), Make и Clang.
+2. Получить исходный код библиотек:
+   - [UniStreakLib 1.0.0](https://github.com/Snoparic/unistreak_lib/releases/tag/v1.0.0)
+   - [cJSON 1.7.19](https://github.com/DaveGamble/cJSON/releases/tag/v1.7.19)
+3. Разместить файлы библиотеки (`unistreak.h`, `unistreak.c`) и cJSON (`cJSON.h`, `cJSON.c`) в той же директории, где находится `main.c`.
+4. Запустить скрипт сборки:
 
 ```bash
-sha256sum -c sha256sums.txt
+cd scripts
+./build-all.sh
+
+```
