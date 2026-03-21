@@ -1,0 +1,4 @@
+6450a9b3dc2ac742f0dc4b969d07315d67920ff2d312c51f9f96134586e59074  unistreak_cli-1.0.0-linux-x86_64.tar
+762dd7cb5fbf87621762bfa0bc61aef7dacc7c920c2aedab4d8567113bafcc19  unistreak_cli-1.0.0-linux-x86.tar
+e10746e3a8634d4f44568a8b43ac15af2c0bcb31d42c611e2e728742dc7d7ef5  unistreak_cli-1.0.0-win32-x86.exe.tar
+2e440fc2e0f0469be89b602c0ccb98bf91988bd084580ef257878700b259d13d  unistreak_cli-1.0.0-windows-x64.exe.tar
